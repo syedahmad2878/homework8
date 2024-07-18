@@ -18,7 +18,7 @@ runs-on: ubuntu-latest
 
       with:
         push: true
-        tags: ahmadrizvi/my-docker-cicd:latest
+        tags: syedahmad2878/my-docker-cicd:latest
 
     - name: Verify Docker image
-      run: docker run ahmadrizvi/my-docker-cicd:latest
+      run: docker run syedahmad2878/my-docker-cicd:latest
