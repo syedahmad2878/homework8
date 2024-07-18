@@ -27,7 +27,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: syedahmad2878/my-docker-cicd:latest
+        tags: sa2878@njit.edu/my-docker-cicd:latest
 
     - name: Verify Docker image
-      run: docker run syedahmad2878/my-docker-cicd:latest
+      run: docker run sa2878@njit.edu/my-docker-cicd:latest
