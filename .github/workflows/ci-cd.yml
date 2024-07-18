@@ -1,4 +1,14 @@
-runs-on: ubuntu-latest
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
@@ -14,8 +24,7 @@ runs-on: ubuntu-latest
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build and push Docker image
-      uses: docker/build-push-act
-
+      uses: docker/build-push-action@v2
       with:
         push: true
         tags: syedahmad2878/my-docker-cicd:latest
